@@ -19,3 +19,19 @@ String formattedTime(DateTime time) {
 String formattedDate(DateTime time) {
   return DateFormat("EE d. MMM.", "de_DE").format(time);
 }
+
+// to check the number is prime or not, I borrowed the logic they provided in this link:
+//  https://medium.com/@milankathiriya/a-dart-program-to-find-if-a-given-number-is-palindrome-or-not-4c55c9f48310
+bool isPrime(int number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  for (int i = 2; i <= number / 2; i++) {
+    if (number % i == 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
