@@ -27,8 +27,4 @@ class RandomNumberRepository {
   Future<DateTime?> getLastPrimeTime() async {
     return await local.getLastPrimeTime();
   }
-
-  Future<void> clearLastPrimeTime() async {
-    await local.removeLastPrimeTime();
-  }
 }

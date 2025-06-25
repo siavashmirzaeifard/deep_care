@@ -15,11 +15,6 @@ class LocalDataSource {
     final time = prefs.getInt(lastPrimeTimeString);
 
     if (time == null) return null;
-    return DateTime.fromMicrosecondsSinceEpoch(time);
-  }
-
-  Future<void> removeLastPrimeTime() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(lastPrimeTimeString);
+    return DateTime.fromMillisecondsSinceEpoch(time);
   }
 }

@@ -1,10 +1,11 @@
 import 'dart:async';
 
-import 'package:deep_care/core/utility/utils.dart';
-import 'package:deep_care/data/repository/random_number_repository.dart';
-import 'package:deep_care/logic/prime_number/prime_number_event.dart';
-import 'package:deep_care/logic/prime_number/prime_number_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '/core/utility/utils.dart';
+import '/data/repository/random_number_repository.dart';
+import '/logic/prime_number/prime_number_event.dart';
+import '/logic/prime_number/prime_number_state.dart';
 
 class PrimeNumberBloc extends Bloc<PrimeNumberEvent, PrimeNumberState> {
   final RandomNumberRepository repository;

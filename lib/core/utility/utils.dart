@@ -35,3 +35,14 @@ bool isPrime(int number) {
 
   return true;
 }
+
+// to format duration between now and last time into HH:mm:ss I used this formatter that
+// provided in the link below:
+//  https://stackoverflow.com/a/57313703/13234584
+String formatDuration(Duration duration) {
+  return [
+    duration.inHours,
+    duration.inMinutes.remainder(60),
+    duration.inSeconds.remainder(60),
+  ].map((seg) => seg.toString().padLeft(2, '0')).join(':');
+}
